@@ -24,7 +24,8 @@ def GWO(obj_func, lb, ub, dim, pop_size, max_iter):
     # Mảng lưu lịch sử để vẽ biểu đồ
     convergence_curve = []
 
-    print(f"Đang chạy GWO với {pop_size} sói trong {max_iter} vòng lặp...")
+    print(f"\n=> Đang khởi chạy GWO với: Dim={dim}, Pop={pop_size}, Iter={max_iter}")
+    print("-" * 40)
 
     # Vòng lặp chính
     for t in range(0, max_iter):
@@ -70,15 +71,33 @@ def GWO(obj_func, lb, ub, dim, pop_size, max_iter):
                 
                 positions[i, j] = (X1 + X2 + X3) / 3
     
-    # Trả về Alpha_score, Alpha_pos và convergence_curve để vẽ biểu đồ
     return Alpha_score, Alpha_pos, convergence_curve
 
-# --- 3. CHẠY VÀ VẼ BIỂU ĐỒ ---
+# --- 3. CHẠY VÀ VẼ BIỂU ĐỒ (Đã sửa để nhận Input) ---
 if __name__ == "__main__":
-    # Tham số
-    dim = 30
-    pop_size = 50
-    max_iter = 100
+    print("=== CẤU HÌNH THAM SỐ GWO ===")
+    print("(Nhấn Enter để dùng giá trị mặc định)")
+    
+    try:
+        # 1. Nhập số chiều (Dimension)
+        d_in = input("1. Nhập số chiều (Mặc định 30): ")
+        dim = int(d_in) if d_in.strip() else 30
+        
+        # 2. Nhập số lượng sói (Population)
+        p_in = input("2. Nhập số lượng sói (Mặc định 50): ")
+        pop_size = int(p_in) if p_in.strip() else 50
+        
+        # 3. Nhập số vòng lặp (Iterations)
+        i_in = input("3. Nhập số vòng lặp (Mặc định 100): ")
+        max_iter = int(i_in) if i_in.strip() else 100
+        
+    except ValueError:
+        print("\n[LỖI] Bạn nhập không phải số! Chương trình sẽ dùng cấu hình mặc định.")
+        dim = 30
+        pop_size = 50
+        max_iter = 100
+
+    # Các tham số cố định khác
     lb = -100
     ub = 100
 
@@ -87,17 +106,17 @@ if __name__ == "__main__":
 
     # In kết quả
     print("-" * 40)
+    print(f"KẾT QUẢ CUỐI CÙNG:")
     print(f"Best Score: {best_score}")
     print(f"Best Position (rút gọn): {best_pos[:5]} ...")
     print("-" * 40)
 
     # --- VẼ BIỂU ĐỒ MATLAB STYLE ---
     plt.figure(figsize=(10, 6))
-    
-    # Dùng semilogy để vẽ trục Log
     plt.semilogy(curve, 'b-', linewidth=2) 
     
-    plt.title('GWO Convergence Curve (Sphere Function)')
+    # Cập nhật tiêu đề biểu đồ để hiển thị tham số đã nhập
+    plt.title(f'GWO Convergence (Dim={dim}, Pop={pop_size}, Iter={max_iter})')
     plt.xlabel('Iteration')
     plt.ylabel('Fitness Value (Log Scale)')
     plt.grid(True)
