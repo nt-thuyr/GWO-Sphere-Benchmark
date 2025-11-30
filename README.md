@@ -3,9 +3,7 @@
 ![Python](https://img.shields.io/badge/Python-3.x-blue.svg)
 
 ## 📖 Tổng quan
-Repository này chứa mã nguồn Python demo cho thuật toán **Grey Wolf Optimizer (GWO)**. Dự án được thực hiện nhằm mục đích minh họa cơ chế hoạt động, khả năng hội tụ và hiệu suất của GWO trên bài toán tối ưu hóa cơ bản.
-
-Dự án nằm trong khuôn khổ báo cáo môn học về **Trí tuệ Bầy đàn (Swarm Intelligence)**.
+Repository này chứa mã nguồn Python demo cho thuật toán **Grey Wolf Optimizer (GWO)**, được thực hiện nhằm mục đích minh họa cơ chế hoạt động, khả năng hội tụ và hiệu suất của GWO trên bài toán tối ưu hóa cơ bản.
 
 ## 🐺 Về thuật toán GWO
 Grey Wolf Optimizer là thuật toán lấy cảm hứng từ tập tính săn mồi và cơ chế phân cấp xã hội của loài chó sói xám trong tự nhiên:
