@@ -38,7 +38,7 @@ $$f(x) = \sum_{i=1}^{D} x_i^2$$
 ### 1. Biểu đồ hội tụ (Convergence Curve)
 Thuật toán cho thấy khả năng tìm kiếm nghiệm tối ưu rất nhanh ở giai đoạn đầu (Khám phá) và tinh chỉnh chính xác ở giai đoạn sau (Khai thác).
 
-![Biểu đồ hội tụ](images/GWO-sphere-function-solo)
+![Biểu đồ hội tụ](images/GWO-sphere-function-solo.png)
 *(Kết quả chạy với 50 cá thể trong 100 vòng lặp)*
 
 ### 2. So sánh hiệu năng
@@ -49,7 +49,7 @@ Chúng tôi đã thử nghiệm 2 kịch bản để thấy sự đánh đổi g
 | **V1 (Tài nguyên thấp)** | 5 | 30 | Chạy nhanh, nhưng độ chính xác chưa cao. |
 | **V2 (Tài nguyên cao)** | 50 | 100 | Chạy lâu hơn, độ chính xác cực cao ($10^{-5}$ trở xuống). |
 
-![Biểu đồ so sánh](GWO-sphere-function-compare)
+![Biểu đồ so sánh](images/GWO-sphere-function-compare.png)
 
 ## 🛠️ Cài đặt và Chạy thử
 
