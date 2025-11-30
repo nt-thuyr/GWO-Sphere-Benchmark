@@ -1,7 +1,6 @@
 # Demo Thuật toán Bầy Sói (Grey Wolf Optimizer - GWO) với bài toán Sphere Function
 
 ![Python](https://img.shields.io/badge/Python-3.x-blue.svg)
-![Status](https://img.shields.io/badge/Status-Completed-green.svg)
 
 ## 📖 Tổng quan
 Kho lưu trữ (Repository) này chứa mã nguồn Python demo cho thuật toán **Grey Wolf Optimizer (GWO)**. Dự án được thực hiện nhằm mục đích minh họa cơ chế hoạt động, khả năng hội tụ và hiệu suất của GWO trên bài toán tối ưu hóa cơ bản.
@@ -25,11 +24,12 @@ Output:
 * **Convergence Curve**: Biểu đồ thể hiện sự giảm dần của lỗi qua các vòng lặp.
 
 ## 🎯 Bài toán kiểm thử: Hàm Sphere
-Chúng tôi sử dụng hàm Sphere để đánh giá thuật toán. Đây là một hàm lồi, đơn mode, tiêu chuẩn để kiểm tra tốc độ hội tụ:
+Chúng tôi sử dụng hàm Sphere để đánh giá thuật toán. Đây là một hàm lồi, đơn mode (unimodal) và không có cực trị địa phương, tiêu chuẩn để kiểm tra tốc độ hội tụ:
 
 $$f(x) = \sum_{i=1}^{D} x_i^2$$
 
-* **Mục tiêu:** Tìm cực tiểu toàn cục ($Min \to 0$).
+* **Ý nghĩa:** Kiểm chứng tốc độ hội tụ và khả năng dẫn dắt của các con sói đầu đàn ($\alpha, \beta, \delta$).
+* **Mục tiêu:** Tìm cực tiểu toàn cục ($Min \to 0$ tại $x_i = 0$).
 * **Không gian tìm kiếm:** $[-100, 100]$
 * **Số chiều ($D$):** 30
 
