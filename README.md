@@ -57,7 +57,7 @@ Chúng tôi đã thử nghiệm 2 kịch bản để thấy sự đánh đổi g
 
    pip install requirements.txt
 
-   python src/gwo.py [dim] [pop_size] [max_iter]
+   python src/gwo.py
    ```
 
 ## 📚 References
